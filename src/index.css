@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans text-brand-700 bg-brand-50;
+  }
+}
+
+@layer components {
+  .gold-line {
+    @apply h-px bg-gradient-to-r from-transparent via-gold-500 to-transparent;
+  }
+
+  .formal-document {
+    @apply border border-gold-200 bg-white p-8 leading-relaxed;
+    font-family: 'Noto Serif SC', serif;
+  }
+
+  .seal-text {
+    @apply text-gold-600 font-serif font-bold text-sm;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    letter-spacing: 0.2em;
+  }
+}
+
+@layer utilities {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #E8ECF2;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #8FA3BF;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #536E94;
+  }
+}
